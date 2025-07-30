@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>おみくじアプリにようこそ!</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
     <div class="Omikuji-main">
         <div class="Omikuji-words">
             <h2 class="Omikuji-title">今日のおみくじを引きませんか？</h2>
-            <button class="Omikuji-btn">くじを引く</button>
+            <form th:action="@{/draw}" method="post">
+                <button class="omikuji-btn" type="submit">くじを引く</button>
+            </form>
         </div>
     </div>
 </body>
