@@ -1,14 +1,19 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>占い結果</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
     <div class="Omikuji-result">
-        <p class="Omikuji-result-words">本日の運勢: {result} です！</p>
-        <p class="Omikuji-result-luckyitem">ラッキーアイテム: {luckyitem} です！</p>
+        <h1>今日の運勢</h1>
+
+        <!-- Thymeleafでデータを表示-->
+        <p class="Omikuji-result-date">日付： <span th:text="${omikujiResulet.date}"></span></p>
+        <p class="Omikuji-result-words">本日の運勢： <strong th:text="${omikujiResulet.result}"></strong></p>
+        <p class="Omikuji-result-luckyitem">ラッキーアイテム： <strong th:text="${omikujiResulet.luckyitem}"></strong></p>
     </div>
     <div class="footer-words">
         <footer class="footer-words-today">
