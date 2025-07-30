@@ -3,16 +3,41 @@ package com.example.demo.Model;
 import java.time.LocalDate;
 
 public class OmikujiModel {
+    // プライベートフィールド（データ保護）
     private String result;
     private String luckyitem;
-    private String date;
+    private LocalDate date;
 
-    // 　日付定義
-    LocalDate today = LocalDate.now();
+    // コンストラクタ
+    public OmikujiModel(String result, String luckyitem, LocalDate date) {
+        this.result = result;
+        this.luckyitem = luckyitem;
+        this.date = date;
+    }
 
-    // 結果定義
-    String[] results = {"大吉", "中吉", "小吉", "末吉", "凶"};
+    // ゲッター(読み取り用)
+    public String getResult() {
+        return result;
+    }
 
-    // ラッキーアイテム定義
-    String[] luckyItems = {"スマホケース", "カメラ", "本", "CDプレーヤー", "冷蔵庫", "机", "ボールペン"};
+    public String getLuckyitem() {
+        return luckyitem;
+    }
+
+    public LocalDate getDate() {
+        return date;
+    }
+
+    // セッター(書き込み用)
+    public void setResult(String result) {
+        this.result = result;
+    }
+
+    public void setLuckyitem(String luckyitem) {
+        this.luckyitem = luckyitem;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 }
