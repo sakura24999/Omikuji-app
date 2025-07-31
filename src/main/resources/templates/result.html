@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>占い結果</title>
+    <title>おみくじアプリ: 占い結果</title>
     <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
     <div class="Omikuji-result">
-        <h1>今日の運勢</h1>
+        <header class="Omikuji-result-header">
+            <h1 class="Omikuji-result-title">今日の運勢</h1>
+        </header>
 
         <!-- Thymeleafでデータを表示-->
-        <p class="Omikuji-result-date">日付： <span th:text="${omikujiResulet.date}"></span></p>
-        <p class="Omikuji-result-words">本日の運勢： <strong th:text="${omikujiResulet.result}"></strong></p>
-        <p class="Omikuji-result-luckyitem">ラッキーアイテム： <strong th:text="${omikujiResulet.luckyitem}"></strong></p>
+        <p class="Omikuji-result-date">日付： <span th:text="${omikujiResult.date}"></span></p>
+        <p class="Omikuji-result-words">本日の運勢： <strong th:text="${omikujiResult.result}"></strong></p>
+        <p class="Omikuji-result-luckyitem">ラッキーアイテム： <strong th:text="${omikujiResult.luckyitem}"></strong></p>
     </div>
     <div class="footer-words">
         <footer class="footer-words-today">
