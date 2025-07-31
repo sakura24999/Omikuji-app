@@ -1,3 +1,4 @@
+/* index.htmlのCSS */
 .Omikuji-main {
     background-color: rgb(247, 186, 222);
 }
@@ -23,3 +24,30 @@
     color: white;
     cursor: pointer;
 }
+
+/* result.htmlのCSS */
+.Omikuji-result {
+    background-color: rgb(255, 255, 222);
+}
+
+.Omikuji-result-header {
+    background-color: rgb(232, 209, 255);
+}
+
+.Omikuji-result-title {
+    text-align: center;
+}
+
+.Omikuji-result-date, .Omikuji-result-words, .Omikuji-result-luckyitem {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footer-words-today-words {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(252, 181, 193);
+}
+
