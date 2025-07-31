@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>おみくじアプリにようこそ!</title>
+    <title>おみくじアプリ</title>
     <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
     <div class="Omikuji-main">
+        <header class="Omikuji-header">
+            <h1 class="Omikuji-header-title">おみくじアプリへようこそ！！</h1>
+        </header>
         <div class="Omikuji-words">
             <h2 class="Omikuji-title">今日のおみくじを引きませんか？</h2>
             <form th:action="@{/draw}" method="post">
-                <button class="omikuji-btn" type="submit">くじを引く</button>
+                <button class="Omikuji-btn" type="submit">くじを引く</button>
             </form>
         </div>
     </div>
